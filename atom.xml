@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>南风</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-07-23T09:54:28.311Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>ChenDongNan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo常用命令</title>
+    <link href="http://yoursite.com/2019/07/23/Hexo%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    <id>http://yoursite.com/2019/07/23/Hexo命令大全/</id>
+    <published>2019-07-23T09:31:56.000Z</published>
+    <updated>2019-07-23T09:54:28.311Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><blockquote><p>hexo new [layout] &lt;文章标题&gt;</p></blockquote><p>layout为可选参数，有三种取值：post、page、draft，如果不输入该参数的话，就用<code>_config.yml</code>配置文件里面的<code>default_layout</code>参数来指定生成文档的布局。</p><p><strong>post</strong></p><p>基于 <code>post</code> 布局生成的文档存在于 <code>source\_posts\</code> 目录下，该目录下的文档会作为博客正文显示在网站中。 </p><p><strong>page</strong></p><p><code>page</code>布局生成的是类似于<strong>首页</strong>和<strong>关于</strong>这样的分类页面。</p><p><strong>draft</strong></p><p><code>draft</code>布局生成的是草稿文档，它生成的文档保存在<code>source\_drafts</code>目录下，这里的文档不会显示在博客正文中，只有用如下命令才会将草稿发布成正文：</p><blockquote><p>hexo publish &lt;文章标题&gt;</p></blockquote><h3 id="简写命令"><a href="#简写命令" class="headerlink" title="简写命令"></a>简写命令</h3><ol><li><span class="label danger">hexo n title == hexo new title</span>#新建文章</li><li><span class="label danger">hexo p == hexo publish</span> #将草稿发布为正文</li><li><span class="label danger">hexo g == hexo generate</span> #生成静态页面到public目录</li><li><span class="label danger">hexo s == hexo server</span> #启动本地服务预览</li><li><span class="label danger">hexo d == hexo deploy</span> #部署到Github</li><li><span class="label danger">hexo d -g</span> #等于第3和第5两条命令</li></ol><h3 id="服务器相关"><a href="#服务器相关" class="headerlink" title="服务器相关"></a>服务器相关</h3><ol><li><span class="label danger">hexo s --debug</span> #以调试模式开启本地服务</li><li><span class="label danger">hexo s -p 5000</span> #更改端口号</li><li><span class="label danger">hexo s -i ip</span> #自定义IP地址</li><li><span class="label danger">hexo clean</span> #清除缓存</li></ol><h5 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h5><p><a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="noopener">https://segmentfault.com/a/1190000002632530</a></p><p><a href="http://yearito.cn/posts/hexo-writing-skills.html" target="_blank" rel="noopener">http://yearito.cn/posts/hexo-writing-skills.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      整理了一下Hexo常用的命令
+    
+    </summary>
+    
+      <category term="命令" scheme="http://yoursite.com/categories/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github搭建自己的博客</title>
+    <link href="http://yoursite.com/2019/07/23/My-Frist/"/>
+    <id>http://yoursite.com/2019/07/23/My-Frist/</id>
+    <published>2019-07-23T02:43:32.000Z</published>
+    <updated>2019-07-23T09:50:34.647Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note [success]"><ol><li>安装配置git</li><li>安装node.js</li><li>安装配置Hexo</li><li>配置Github</li><li>Github与git联系起来</li><li>发布文章</li><li>主题配置</li></ol></div><h3 id="第一步-安装配置git"><a href="#第一步-安装配置git" class="headerlink" title="第一步 安装配置git"></a>第一步 安装配置git</h3><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git官网下载地址</a></p><p>具体安装教程网上很多，这里不再赘述</p><p>安装完成后执行 git –version ，如果出现git的版本号就说明安装成功</p><h3 id="第二步-安装配置node-js"><a href="#第二步-安装配置node-js" class="headerlink" title="第二步 安装配置node.js"></a>第二步 安装配置node.js</h3><p>node.js安装网上教程很多，这里不再多说。</p><p>给出64位下载地址：<a href="https://nodejs.org/dist/v4.2.3/node-v4.2.3-x64.msi" target="_blank" rel="noopener">node.js 64-bit</a></p><p>然后一直选择默认设置，一直next</p><p>在命令行输入命令查看安装是否成功：</p><blockquote><p>node -v</p><p>npm -v</p></blockquote><p>如果出现版本号则说明安装成功。</p><h3 id="第三步-安装配置Hexo"><a href="#第三步-安装配置Hexo" class="headerlink" title="第三步 安装配置Hexo"></a>第三步 安装配置Hexo</h3><p><strong>安装</strong></p><p>在合适的地方新建一个文件夹，例如我是在D盘下新建了Hexo文件夹，并在命令行窗口进入到该文件夹</p><p>在命令行依次输入以下命令：</p><blockquote><p>npm install hexo-cli -g </p><p>npm install hexo –save </p><p>hexo -v </p></blockquote><p>如果出现了hexo版本号，os系统版本等，就表示安装成功</p><p><strong>Hexo配置</strong></p><p>初始化Hexo</p><blockquote><p>hexo init</p><p>npm install</p></blockquote><p>之后npm将会自动安装你需要的组件，只需要等待即可。</p><p><strong>首次体验Hexo</strong></p><blockquote><p>hexo g</p><p>hexo s</p></blockquote><p>在浏览器访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到Hexo首页</p><h3 id="第四步-配置Github"><a href="#第四步-配置Github" class="headerlink" title="第四步 配置Github"></a>第四步 配置Github</h3><p>打开Github官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> </p><p>如果没有注册就注册一个账号，注册过后创建一个仓库，选择new repository，然后仓库名字就填yourname.github.io，选择公共仓库（当然你可以选择私有的，前提是你能花$7）</p><p>选择Settings，找到Github Pages，点击Automatic page generator ，这时就可以用你的仓库名访问了，例如我的访问地址为：<a href="https://cdn198.github.io/" target="_blank" rel="noopener">https://cdn198.github.io/</a></p><h3 id="第五步-Hexo和Github联系起来"><a href="#第五步-Hexo和Github联系起来" class="headerlink" title="第五步 Hexo和Github联系起来"></a>第五步 Hexo和Github联系起来</h3><p>打开hexo安装目录的_config.yml文件，找到Deployment ，然后修改为如下信息：</p><blockquote><p>deploy: </p><p>​    type: git</p><p>​    repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:cdn198/cdn198.github.io.git</p><p>​    branch: master </p></blockquote><h3 id="第六步-发布文章"><a href="#第六步-发布文章" class="headerlink" title="第六步 发布文章"></a>第六步 发布文章</h3><blockquote><p>hexo new post “article title” </p></blockquote><p>该命令会在hexo安装目录下的source/_posts文件夹下创建一个md文件</p><p>用Markdown编辑器编辑这个文件，写文章，写完后保存退出</p><p>然后运行一下命令：</p><blockquote><p>hexo g //生成</p><p>hexo d //部署</p></blockquote><p>上面命令也可用一句完成</p><blockquote><p>hexo d -g</p></blockquote><p>接下来访问你的博客地址就可以看到你发布的文章了，例如我的地址：<a href="https://cdn198.github.io" target="_blank" rel="noopener">https://cdn198.github.io</a></p><h3 id="第七步-主题配置"><a href="#第七步-主题配置" class="headerlink" title="第七步 主题配置"></a>第七步 主题配置</h3><p>后续待完成</p><h5 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h5><p><a href="https://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">CSDN</a></p><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div class=&quot;note [success]&quot;&gt;&lt;ol&gt;
+&lt;li&gt;安装配置git&lt;/li&gt;
+&lt;li&gt;安装node.js&lt;/li&gt;
+&lt;li&gt;安装配置Hexo&lt;/li&gt;
+&lt;li&gt;配置Github&lt;/li&gt;
+&lt;li&gt;Github与git联系起来&lt;/li&gt;
+&lt;li&gt;发布文章&lt;/l
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>

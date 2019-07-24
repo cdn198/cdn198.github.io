@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hexo常用命令]]></title>
+    <url>%2F2019%2F07%2F23%2FHexo%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%2F</url>
+    <content type="text"><![CDATA[写文章 hexo new [layout] &lt;文章标题&gt; layout为可选参数，有三种取值：post、page、draft，如果不输入该参数的话，就用_config.yml配置文件里面的default_layout参数来指定生成文档的布局。 post 基于 post 布局生成的文档存在于 source\_posts\ 目录下，该目录下的文档会作为博客正文显示在网站中。 page page布局生成的是类似于首页和关于这样的分类页面。 draft draft布局生成的是草稿文档，它生成的文档保存在source\_drafts目录下，这里的文档不会显示在博客正文中，只有用如下命令才会将草稿发布成正文： hexo publish &lt;文章标题&gt; 简写命令 hexo n title == hexo new title#新建文章 hexo p == hexo publish #将草稿发布为正文 hexo g == hexo generate #生成静态页面到public目录 hexo s == hexo server #启动本地服务预览 hexo d == hexo deploy #部署到Github hexo d -g #等于第3和第5两条命令 服务器相关 hexo s --debug #以调试模式开启本地服务 hexo s -p 5000 #更改端口号 hexo s -i ip #自定义IP地址 hexo clean #清除缓存 参考文章https://segmentfault.com/a/1190000002632530 http://yearito.cn/posts/hexo-writing-skills.html]]></content>
+      <categories>
+        <category>命令</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo+Github搭建自己的博客]]></title>
+    <url>%2F2019%2F07%2F23%2FMy-Frist%2F</url>
+    <content type="text"><![CDATA[安装配置git 安装node.js 安装配置Hexo 配置Github Github与git联系起来 发布文章 主题配置 第一步 安装配置gitgit官网下载地址 具体安装教程网上很多，这里不再赘述 安装完成后执行 git –version ，如果出现git的版本号就说明安装成功 第二步 安装配置node.jsnode.js安装网上教程很多，这里不再多说。 给出64位下载地址：node.js 64-bit 然后一直选择默认设置，一直next 在命令行输入命令查看安装是否成功： node -v npm -v 如果出现版本号则说明安装成功。 第三步 安装配置Hexo安装 在合适的地方新建一个文件夹，例如我是在D盘下新建了Hexo文件夹，并在命令行窗口进入到该文件夹 在命令行依次输入以下命令： npm install hexo-cli -g npm install hexo –save hexo -v 如果出现了hexo版本号，os系统版本等，就表示安装成功 Hexo配置 初始化Hexo hexo init npm install 之后npm将会自动安装你需要的组件，只需要等待即可。 首次体验Hexo hexo g hexo s 在浏览器访问 http://localhost:4000/ 就可以看到Hexo首页 第四步 配置Github打开Github官网：https://github.com/ 如果没有注册就注册一个账号，注册过后创建一个仓库，选择new repository，然后仓库名字就填yourname.github.io，选择公共仓库（当然你可以选择私有的，前提是你能花$7） 选择Settings，找到Github Pages，点击Automatic page generator ，这时就可以用你的仓库名访问了，例如我的访问地址为：https://cdn198.github.io/ 第五步 Hexo和Github联系起来打开hexo安装目录的_config.yml文件，找到Deployment ，然后修改为如下信息： deploy: ​ type: git ​ repo: git@github.com:cdn198/cdn198.github.io.git ​ branch: master 第六步 发布文章 hexo new post “article title” 该命令会在hexo安装目录下的source/_posts文件夹下创建一个md文件 用Markdown编辑器编辑这个文件，写文章，写完后保存退出 然后运行一下命令： hexo g //生成 hexo d //部署 上面命令也可用一句完成 hexo d -g 接下来访问你的博客地址就可以看到你发布的文章了，例如我的地址：https://cdn198.github.io 第七步 主题配置后续待完成 参考文章CSDN NexT使用文档]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
