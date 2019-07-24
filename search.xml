@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo相关资源]]></title>
+    <url>%2F2019%2F07%2F24%2FHexo%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90%2F</url>
+    <content type="text"><![CDATA[NexT官网 Next所用的图标 HexoEditor使用 Hexo搭建 [Hexo下的Markdown语法]https://www.ofind.cn/blog/HEXO/HEXO下的Markdown语法(GFM)写博客.html HexoEditor快捷键]]></content>
+      <categories>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo常用命令]]></title>
     <url>%2F2019%2F07%2F23%2FHexo%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%2F</url>
     <content type="text"><![CDATA[写文章 hexo new [layout] &lt;文章标题&gt; layout为可选参数，有三种取值：post、page、draft，如果不输入该参数的话，就用_config.yml配置文件里面的default_layout参数来指定生成文档的布局。 post 基于 post 布局生成的文档存在于 source\_posts\ 目录下，该目录下的文档会作为博客正文显示在网站中。 page page布局生成的是类似于首页和关于这样的分类页面。 draft draft布局生成的是草稿文档，它生成的文档保存在source\_drafts目录下，这里的文档不会显示在博客正文中，只有用如下命令才会将草稿发布成正文： hexo publish &lt;文章标题&gt; 简写命令 hexo n title == hexo new title#新建文章 hexo p == hexo publish #将草稿发布为正文 hexo g == hexo generate #生成静态页面到public目录 hexo s == hexo server #启动本地服务预览 hexo d == hexo deploy #部署到Github hexo d -g #等于第3和第5两条命令 服务器相关 hexo s --debug #以调试模式开启本地服务 hexo s -p 5000 #更改端口号 hexo s -i ip #自定义IP地址 hexo clean #清除缓存 参考文章https://segmentfault.com/a/1190000002632530 http://yearito.cn/posts/hexo-writing-skills.html]]></content>

@@ -90,14 +90,14 @@
 
 <meta name="description" content="个人博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="分类">
+<meta property="og:url" content="https://cdn198.github.io/categories/index.html">
 <meta property="og:site_name" content="南风">
 <meta property="og:description" content="个人博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-23T10:00:39.902Z">
+<meta property="og:updated_time" content="2019-07-24T07:10:57.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="分类">
 <meta name="twitter:description" content="个人博客">
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="https://cdn198.github.io/categories/">
 
 
 
 
 
-  <title>categories | 南风</title>
+  <title>分类 | 南风</title>
   
 
 
@@ -229,6 +229,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-resources">
+          <a href="/resources" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-save"></i> <br>
+            
+            资源
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
@@ -296,7 +306,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
+	<h1 class="post-title" itemprop="name headline">分类</h1>
 
 
 
@@ -310,10 +320,10 @@
         
           <div class="category-all-page">
             <div class="category-all-title">
-                目前共计 1 个分类
+                目前共计 2 个分类
             </div>
             <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/命令/">命令</a><span class="category-list-count">1</span></li></ul>
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/命令/">命令</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li></ul>
             </div>
           </div>
         
@@ -333,10 +343,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -375,7 +381,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -386,7 +392,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -464,6 +470,14 @@
                     <a href="http://dugblog.coding.me/" title="不知道哪里捡来的博客" target="_blank">不知道哪里捡来的博客</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/" title="中国开发者交流社区" target="_blank">中国开发者交流社区</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im/" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -508,7 +522,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共944字</span>
+  <span class="post-count">博客全站共984字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -516,17 +530,17 @@
 
   
     <span class="site-uv">
-      <i class="fa fa-user"></i> 我的第
+      <i class="fa fa-user"></i> My Friend
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      位朋友
+      
     </span>
   
 
   
     <span class="site-pv">
-      <i class="fa fa-eye"></i> 回眸
+      <i class="fa fa-eye"></i> Meet You
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次才与你相遇
+      
     </span>
   
 </div>
@@ -682,6 +696,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'MlIP2bjYhQbQshcHcwibEbQk-gzGzoHsz',
+        appKey: '91FA1iBoAWh1dl6yzIt0Oxmb',
+        placeholder: '来都来了，不撩一句嘛(>ω<*)，记得留下邮箱方便收到回复通知哦！',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
