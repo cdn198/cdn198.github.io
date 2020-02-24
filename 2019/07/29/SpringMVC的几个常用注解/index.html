@@ -430,7 +430,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  594
+                  598
                 </span>
               
 
@@ -491,7 +491,7 @@
 <p>@PathVariable中的参数可以是任意的简单类型，如int, long, Date等等。Spring会自动将其转换成合适的类型或者抛出 TypeMismatchException异常。 </p>
 <h3 id="Validated和-Valid"><a href="#Validated和-Valid" class="headerlink" title="@Validated和@Valid"></a>@Validated和@Valid</h3><p>####<strong>用法</strong></p>
 <p>在Controller层增加一个参数BindingResult，BindingResult必须紧挨着要检验的参数后面</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public String test02(@RequestBody @Validated<span class="built_in"> User </span>user, BindingResult result)&#123;</span><br><span class="line">        <span class="keyword">if</span> (result.hasErrors())&#123;</span><br><span class="line">            return <span class="string">"false: "</span>+result.getFieldError().getDefaultMessage();</span><br><span class="line">        &#125;</span><br><span class="line">        return <span class="string">"success "</span> + result.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public String test02(@RequestBody @Validated User user, BindingResult result)&#123;</span><br><span class="line">        if (result.hasErrors())&#123;</span><br><span class="line">            return &quot;false: &quot;+result.getFieldError().getDefaultMessage();</span><br><span class="line">        &#125;</span><br><span class="line">        return &quot;success &quot; + result.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>####<strong>区别</strong></p>
 <p><a href="https://blog.csdn.net/herojuice/article/details/86020101" target="_blank" rel="noopener">link</a></p>
