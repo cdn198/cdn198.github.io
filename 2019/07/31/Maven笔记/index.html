@@ -513,10 +513,10 @@
 <p>即 本地—-&gt;中央—-&gt;远程(私服)</p>
 <h3 id="六、Maven插件"><a href="#六、Maven插件" class="headerlink" title="六、Maven插件"></a>六、Maven插件</h3><p>Maven 实际上是一个依赖插件执行的框架，每个任务实际上是由插件完成。</p>
 <p>插件通常提供了一个目标的集合，并且可以使用下面的语法执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;code&gt;mvn [plugin-name]:[goal-name]&lt;/code&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">code</span>&gt;<span class="keyword">mvn </span>[plugin-name]:[goal-name]&lt;/<span class="meta">code</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>例如，一个 Java 工程可以使用 maven-compiler-plugin 的 compile-goal 编译，使用以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;code&gt;mvn compiler:compile&lt;/code&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">code</span>&gt;<span class="keyword">mvn </span>compiler:compile&lt;/<span class="meta">code</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>下面是一些常用插件的列表：</p>
 <table>
@@ -599,7 +599,7 @@
 <td>拷贝最终的工程包到<strong>远程仓库(私服)</strong>中，以共享给其他开发人员和工程</td>
 </tr>
 </tbody></table>
-<h3 id="八、Maven命令"><a href="#八、Maven命令" class="headerlink" title="八、Maven命令"></a>八、Maven命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1. 创建Maven的普通java项目： </span><br><span class="line">   mvn archetype:create </span><br><span class="line">   -DgroupId=packageName </span><br><span class="line">   -DartifactId=projectName  </span><br><span class="line">2. 创建Maven的Web项目：   </span><br><span class="line">    mvn archetype:create </span><br><span class="line">    -DgroupId=packageName    </span><br><span class="line">    -DartifactId=webappName </span><br><span class="line">    -DarchetypeArtifactId=maven-archetype-webapp    </span><br><span class="line">3. 编译源代码： mvn compile </span><br><span class="line">4. 编译测试代码：mvn test-compile    </span><br><span class="line">5. 运行测试：mvn test   </span><br><span class="line">6. 产生site：mvn site   </span><br><span class="line">7. 打包：mvn package   </span><br><span class="line">8. 在本地Repository中安装jar：mvn install </span><br><span class="line">9. 清除产生的项目：mvn clean   </span><br><span class="line">10. 生成eclipse项目：mvn eclipse:eclipse  </span><br><span class="line">11. 生成idea项目：mvn idea:idea  </span><br><span class="line">12. 组合使用goal命令，如只打包不测试：mvn -Dtest package   </span><br><span class="line">13. 编译测试的内容：mvn test-compile  </span><br><span class="line">14. 只打jar包: mvn jar:jar</span><br></pre></td></tr></table></figure>
+<h3 id="八、Maven命令"><a href="#八、Maven命令" class="headerlink" title="八、Maven命令"></a>八、Maven命令</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. 创建Maven的普通java项目： </span><br><span class="line">   <span class="keyword">mvn </span>archetype:create </span><br><span class="line">   -DgroupId<span class="symbol">=packageName</span> </span><br><span class="line">   -DartifactId<span class="symbol">=projectName</span>  </span><br><span class="line"><span class="number">2</span>. 创建Maven的Web项目：   </span><br><span class="line">    <span class="keyword">mvn </span>archetype:create </span><br><span class="line">    -DgroupId<span class="symbol">=packageName</span>    </span><br><span class="line">    -DartifactId<span class="symbol">=webappName</span> </span><br><span class="line">    -DarchetypeArtifactId<span class="symbol">=maven</span>-archetype-webapp    </span><br><span class="line"><span class="number">3</span>. 编译源代码： <span class="keyword">mvn </span>compile </span><br><span class="line"><span class="number">4</span>. 编译测试代码：<span class="keyword">mvn </span>test-compile    </span><br><span class="line"><span class="number">5</span>. 运行测试：<span class="keyword">mvn </span>test   </span><br><span class="line"><span class="number">6</span>. 产生site：<span class="keyword">mvn </span>site   </span><br><span class="line"><span class="number">7</span>. 打包：<span class="keyword">mvn </span>package   </span><br><span class="line"><span class="number">8</span>. 在本地Repository中安装jar：<span class="keyword">mvn </span>install </span><br><span class="line"><span class="number">9</span>. 清除产生的项目：<span class="keyword">mvn </span>clean   </span><br><span class="line"><span class="number">10</span>. 生成eclipse项目：<span class="keyword">mvn </span>eclipse:eclipse  </span><br><span class="line"><span class="number">11</span>. 生成idea项目：<span class="keyword">mvn </span>idea:idea  </span><br><span class="line"><span class="number">12</span>. 组合使用goal命令，如只打包不测试：<span class="keyword">mvn </span>-Dtest package   </span><br><span class="line"><span class="number">13</span>. 编译测试的内容：<span class="keyword">mvn </span>test-compile  </span><br><span class="line"><span class="number">14</span>. 只打jar包: <span class="keyword">mvn </span>jar:jar</span><br></pre></td></tr></table></figure>
 
 <p>参考文章：</p>
 <p><a href="https://www.cnblogs.com/xdp-gacl/p/3498271.html" target="_blank" rel="noopener">https://www.cnblogs.com/xdp-gacl/p/3498271.html</a></p>
@@ -782,7 +782,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -830,10 +830,6 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://chendongnan.vip/" title="个人网站" target="_blank">个人网站</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
                     <a href="https://cdn198.github.io/" title="Github博客" target="_blank">Github博客</a>
                   </li>
                 
@@ -863,6 +859,18 @@
                 
                   <li class="links-of-blogroll-item">
                     <a href="https://juejin.im/" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://snailclimb.gitee.io/javaguide/#/" title="面试资料1" target="_blank">面试资料1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cyc2018.github.io/CS-Notes/#/" title="面试资料2" target="_blank">面试资料2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://crossoverjie.top/JCSprout/#/" title="面试资料3" target="_blank">面试资料3</a>
                   </li>
                 
               </ul>

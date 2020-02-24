@@ -638,10 +638,10 @@
 <h3 id="Autowired"><a href="#Autowired" class="headerlink" title="@Autowired"></a>@Autowired</h3><p>Spring里面的规范，可以标注在<strong>构造器、方法、属性、参数</strong>上。</p>
 <ul>
 <li><p><strong>标注在方法上（一般在setter方法上）</strong>。Spring容器创建当前对象后，就会调用这个方法，完成赋值，方法的参数就是从容器里面获取的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//参数里面的Car就是从容器里面获取的</span><br><span class="line">@Autowired</span><br><span class="line">public void setCar(Car car)&#123;</span><br><span class="line">    this.car = car;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参数里面的Car就是从容器里面获取的</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">setCar</span><span class="params">(Car car)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.car = car;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>标注在构造方法上。</strong> 如果组件只有一个有参构造器，则这里的@Autowired可以省略，参数位置的组件还是可以从容器中获取。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">public Boss(Car car)&#123;</span><br><span class="line">    this.car = car;</span><br><span class="line">&#125;</span><br><span class="line">或者</span><br><span class="line">public Boss(Car car)&#123;</span><br><span class="line">    this.car = car;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Boss</span><span class="params">(Car car)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.car = car;</span><br><span class="line">&#125;</span><br><span class="line">或者</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Boss</span><span class="params">(Car car)</span></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.car = car;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -651,7 +651,7 @@
 <li><strong>标注在参数上。</strong></li>
 </ul>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public Boss(@Autowired Car car)&#123;</span><br><span class="line">    this.car = car;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Boss(<span class="meta">@Autowired</span> Car car)&#123;</span><br><span class="line">    <span class="keyword">this</span>.car = car;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><strong>标注在属性上。</strong></li>
@@ -898,7 +898,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -946,10 +946,6 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://chendongnan.vip/" title="个人网站" target="_blank">个人网站</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
                     <a href="https://cdn198.github.io/" title="Github博客" target="_blank">Github博客</a>
                   </li>
                 
@@ -979,6 +975,18 @@
                 
                   <li class="links-of-blogroll-item">
                     <a href="https://juejin.im/" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://snailclimb.gitee.io/javaguide/#/" title="面试资料1" target="_blank">面试资料1</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cyc2018.github.io/CS-Notes/#/" title="面试资料2" target="_blank">面试资料2</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://crossoverjie.top/JCSprout/#/" title="面试资料3" target="_blank">面试资料3</a>
                   </li>
                 
               </ul>
